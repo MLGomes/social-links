@@ -5,6 +5,7 @@ import { FaFacebook, FaInstagram, FaYoutube} from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 import { getDocs, collection, orderBy, query, doc, getDoc } from 'firebase/firestore'
 import { db } from '../../Services/firebaseConnection'
+import { Link } from 'react-router-dom'
 
 export default function Home(){
     const [links, setLinks] = useState([]);
@@ -56,8 +57,8 @@ export default function Home(){
 
     return(
         <div className="home-container">
-
-            <Logo />
+            <Link to = "/Login"><button className='button-login'>Login</button></Link>
+            <Logo/>
             <h1>Meu Portifólio</h1>
             <span>Veja meus links 👇</span>
 
